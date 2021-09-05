@@ -7,7 +7,7 @@ export default function App() {
   const {landscape} = useDeviceOrientation();
 
   return (
-    <View></View>
+    <WelcomeScreen />
   );
 }
 
