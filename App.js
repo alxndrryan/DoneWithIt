@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Dimensions, Text, TouchableHighlight, View, Image, Platform, SafeAreaView, Alert, Button, StatusBar } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
@@ -12,7 +12,7 @@ import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 
 export default function App() {
   return (
-    <ListingDetailsScreen />
+    <ViewImageScreen />
   );
 }
 
