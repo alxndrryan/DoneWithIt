@@ -5,14 +5,12 @@ import { useDimensions, useDeviceOrientation } from '@react-native-community/hoo
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 
-import AppText from './app/components/AppText';
+import AppText from './app/components/AppText/AppText';
+import AppButton from './app/components/AppButton';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <AppText>I love React Native!</AppText>
-      <MaterialCommunityIcons name='email' size={60} />
-    </View>
+    <WelcomeScreen />
   );
 }
 
