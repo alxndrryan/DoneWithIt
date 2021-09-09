@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Dimensions,
@@ -11,6 +11,7 @@ import {
   Alert,
   Button,
   StatusBar,
+  TextInput,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import {
@@ -30,9 +31,17 @@ import Icon from "./app/components/Icon";
 import ListItem from "./app/components/ListItem";
 import AccountScreen from "./app/screens/AccountScreen";
 import ListingsScreen from "./app/screens/ListingsScreen";
+import AppTextInput from "./app/components/AppTextInput";
 
 export default function App() {
-  return <ListingsScreen />;
+  const [firstName, setFirstName] = useState("");
+
+  return (
+    <Screen>
+      <Text>{firstName}</Text>
+      <AppTextInput placeholder="Username" icon="email" />
+    </Screen>
+  );
 }
 
 const styles = StyleSheet.create({
