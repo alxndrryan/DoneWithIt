@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, View, StyleSheet, TouchableHighlight } from "react-native";
-import AppText from "./AppText/AppText";
+import AppText from "./AppText";
 import Swipeable from "react-native-gesture-handler/Swipeable";
 
 import colors from "../config/colors";
