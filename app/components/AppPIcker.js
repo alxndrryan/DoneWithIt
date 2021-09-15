@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Modal,
   StyleSheet,
-  TextInput,
   TouchableWithoutFeedback,
   View,
   Button,
@@ -18,6 +17,7 @@ import PickerItem from "./PickerItem";
 function AppPicker({
   icon,
   items,
+  numberOfColumns = 1,
   onSelectItem,
   PickerItemComponent = PickerItem,
   placeholder,
@@ -58,8 +58,10 @@ function AppPicker({
           <FlatList
             data={items}
             keyExtractor={(item) => item.value.toString()}
+            numColumns={numberOfColumns}
             renderItem={({ item }) => (
               <PickerItemComponent
+                item={item}
                 label={item.label}
                 onPress={() => {
                   setModalVisible(false);
