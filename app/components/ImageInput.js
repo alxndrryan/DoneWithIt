@@ -1,10 +1,15 @@
 import React, { useEffect } from "react";
-import { Alert, Image, StyleSheet, View } from "react-native";
+import {
+  Alert,
+  Image,
+  StyleSheet,
+  TouchableWithoutFeedback,
+  View,
+} from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 
 import colors from "../config/colors";
-import { TouchableWithoutFeedback } from "react-native";
 
 function ImageInput({ imageUri, onChangeImage }) {
   useEffect(() => {
@@ -12,7 +17,7 @@ function ImageInput({ imageUri, onChangeImage }) {
   }, []);
 
   const requestPermission = async () => {
-    const { granted } = ImagePicker.requestMediaLibraryPermissionsAsync();
+    const { granted } = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (!granted) alert("You need to enable permission to access the library.");
   };
 
