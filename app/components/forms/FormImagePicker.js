@@ -19,15 +19,16 @@ function FormImagePicker({ name }) {
     );
   };
 
-  return;
-  <>
-    <ImageInputList
-      imageUris={imageUris}
-      onAddImage={handleAdd}
-      onRemoveImage={handleRemove}
-    />
-    <ErrorMessage error={errors[name]} visible={touched[name]} />
-  </>;
+  return (
+    <>
+      <ImageInputList
+        imageUris={imageUris}
+        onAddImage={handleAdd}
+        onRemoveImage={handleRemove}
+      />
+      <ErrorMessage error={errors[name]} visible={touched[name]} />
+    </>
+  );
 }
 
 export default FormImagePicker;
